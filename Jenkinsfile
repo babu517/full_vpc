@@ -28,15 +28,7 @@ pipeline {
                 }
             }
         }
-        stage('Terraform Destroy') {
-            steps {
-                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_credentials', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']])
-                {
-                
-                sh 'terraform destroy --auto-approve'
-                }
-            }
-        }
+    
     }
 }
 
