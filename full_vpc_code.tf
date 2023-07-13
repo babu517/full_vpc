@@ -422,8 +422,6 @@ resource "aws_instance" "DBCache" {
   vpc_security_group_ids = ["${aws_security_group.all_traffic1.id}"]
 
   tags = {
-
-.
     Name = "DBCache"
   }
   subnet_id     = aws_subnet.DBCache.id
